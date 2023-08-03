@@ -79,9 +79,58 @@ internal static class Program
         Console.WriteLine("aggrAverage: {0}", result);
     }
 
+    static void aggrAverageWithoutLinq(int[] Numbers)
+    {
+        double sum = 0.0;
+        double result = 0;
+        int total = 0;
+
+        foreach (int i in Numbers)
+        {
+            if (i % 2 == 0)
+            {
+                sum += i;
+                total += 1;
+            }
+        }
+
+        result = sum / total;
+        Console.WriteLine("aggrAverageWithoutLinq: {0}", result);
+
+
+    }
+
+    static void AggrCountriesMinMax(string[] countries)
+    {
+        int minCount = countries.Min(x => x.Length);
+        int maxCount = countries.Max(x => x.Length);
+
+        Console.WriteLine("The shortest country name has {0} characters in its name", minCount);
+        Console.WriteLine("The largest country name has {0} characters in its name", maxCount);
+
+    }
+
+    static void AggrShortCountriesWithoutLinq(string[] countries)
+    {
+        int? result = null;
+
+        foreach (string str in countries)
+        {
+            //Console.WriteLine("str.Length < result: {0} < {1} = {2}", str.Length, result, str.Length < result);
+            if (!result.HasValue || str.Length < result)
+            {
+                result = str.Length;
+            }
+        }
+
+        Console.WriteLine("AggrShortCountriesWithoutLinq The shortest country name has {0} characters in its name", result);
+    }
+
+
     static void Main(string[] args)
     {
         int[] Numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+        string[] Countries = { "India", "USA", "UK" };
 
         #region aggrMinWithoutLinq
         aggrMinWithoutLinq(Numbers);
@@ -115,6 +164,17 @@ internal static class Program
         aggrAverage(Numbers);
         #endregion
 
+        #region aggrAverageWithoutLinq 
+        aggrAverageWithoutLinq(Numbers);
+        #endregion
+
+        #region aggrCountriesMinMax 
+        AggrCountriesMinMax(Countries);
+        #endregion
+
+        #region aggrShortCountries
+        AggrShortCountriesWithoutLinq(Countries);
+        #endregion
     }
 }
 
