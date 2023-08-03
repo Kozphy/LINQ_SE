@@ -45,7 +45,7 @@
                                    select new
                                    {
                                        Key = eGroup.Key,
-                                       Employees = eGroup 
+                                       Employees = eGroup .OrderBy(x => x.Name)
                                    };
 
             foreach (var group in EmployeeGroupSQL)
