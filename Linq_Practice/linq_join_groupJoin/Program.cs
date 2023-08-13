@@ -7,19 +7,19 @@ namespace linq_join_groupJoin
     {
 
         static List<Book> books = new List<Book>
-            {
-                new Book("ASP", 1,620),
-                new Book("128", 2, 160),
-                new Book("256", 2, 88),
-                new Book("Note", 3, 238),
-                new Book("Journey", 3, 228),
-            };
+        {
+            new Book("ASP", 1,620),
+            new Book("128", 2, 160),
+            new Book("256", 2, 88),
+            new Book("Note", 3, 238),
+            new Book("Journey", 3, 228),
+        };
 
         static List<Category> categories = new List<Category>
-            {
-                new Category{Id=1, CategoryName="Program"},
-                new Category{Id=2, CategoryName="Diet"}
-            };
+        {
+            new Category{Id=1, CategoryName="Program"},
+            new Category{Id=2, CategoryName="Diet"}
+        };
 
         static void Main(string[] args)
         {
@@ -37,7 +37,10 @@ namespace linq_join_groupJoin
                 keySelectorOfBook,
                 keySelectorOfCategory,
                 (b, subCategory) => new {Book = b, Categories = subCategory.DefaultIfEmpty()}
-            ).Select(x => new BookResult{Name = x.Book.Name, CategoryName = x.Categories?.First()?.CategoryName ?? string.Empty})
+            ).Select(x => new BookResult{
+                    Name = x.Book.Name, 
+                    CategoryName = x.Categories?.First()?.CategoryName ?? string.Empty
+                })
             .ToList();
 
             query.Dump();
