@@ -1,11 +1,11 @@
-﻿namespace LINQ_GroupBy
+﻿namespace LINQ_GrouopBy
 {
     public class Employee
     {
         public int ID { get; set; }
         public string Name { get; set; }
         public string Gender { get; set; }
-        public string Department { get; set; } 
+        public string Department { get; set; }
         public int Salary { get; set; }
 
         public static List<Employee> GetAllEmployees()
@@ -41,11 +41,11 @@
             }
 
             var EmployeeGroupSQL = from emp in Employee.GetAllEmployees()
-                                    group emp by emp.Department into eGroup
+                                   group emp by emp.Department into eGroup
                                    select new
                                    {
                                        Key = eGroup.Key,
-                                       Employees = eGroup .OrderBy(x => x.Name)
+                                       Employees = eGroup.OrderBy(x => x.Name)
                                    };
 
             foreach (var group in EmployeeGroupSQL)
@@ -59,9 +59,7 @@
                 }
 
                 Console.WriteLine(); Console.WriteLine();
-                
             }
-
         }
     }
 }

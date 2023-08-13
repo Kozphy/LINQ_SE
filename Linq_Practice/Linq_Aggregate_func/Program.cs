@@ -1,8 +1,9 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿namespace Linq_Aggregate_func;
 using System;
 using System.Linq;
+// See https://aka.ms/new-console-template for more information
 
-internal static class Program
+internal  class Program
 {
 
     static void aggrMinWithoutLinq(int[] Numbers)
