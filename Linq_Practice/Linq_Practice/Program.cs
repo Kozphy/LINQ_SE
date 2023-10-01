@@ -29,9 +29,11 @@
             Person[] persons = new Person[] { Peter, Sunny, Tim, May };
             Phone[] phones = new Phone[] { num1, num2, num3, num4, num5 };
 
-            var results = from phone in phones
-                          join person in persons on phone.Person.Name equals person.Name
-                          select new { Name = person.Name, PhoneNumber = phone.PhoneNumber };
+
+            var results = 
+                from phone in phones
+                join person in persons on phone.Person.Name equals person.Name
+                select new { Name = person.Name, PhoneNumber = phone.PhoneNumber };
 
             foreach (var item in results)
             {
