@@ -11,9 +11,11 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Linq_Aggregate_func", "Linq
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "linq_leftjoin_groupJoin", "linq_join_groupJoin\linq_leftjoin_groupJoin.csproj", "{6F52C4FA-A747-40CC-A476-53828EA5F9B6}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "selectMany", "selectMany\selectMany.csproj", "{B541169D-79E7-45E7-B8F8-1061A6459C32}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "selectMany", "selectMany\selectMany.csproj", "{B541169D-79E7-45E7-B8F8-1061A6459C32}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "select", "select\select.csproj", "{430D0276-8F9D-40A1-8D9A-380912FF71A7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "select", "select\select.csproj", "{430D0276-8F9D-40A1-8D9A-380912FF71A7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Q_basics_XML", "Q_basics\Q_basics_XML.csproj", "{0DA8F592-3F19-4FA0-82CF-C124C2B213DA}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -45,6 +47,10 @@ Global
 		{430D0276-8F9D-40A1-8D9A-380912FF71A7}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{430D0276-8F9D-40A1-8D9A-380912FF71A7}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{430D0276-8F9D-40A1-8D9A-380912FF71A7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0DA8F592-3F19-4FA0-82CF-C124C2B213DA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0DA8F592-3F19-4FA0-82CF-C124C2B213DA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0DA8F592-3F19-4FA0-82CF-C124C2B213DA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0DA8F592-3F19-4FA0-82CF-C124C2B213DA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
